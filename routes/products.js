@@ -38,22 +38,4 @@ router.post("/edit/:id", async function (req, res, next) {
   await products.save();
   res.redirect("/products");
 });
-
-router.get('/shop/:id', async function(req, res, next) {
-  let p= await product.findById(req.params.id);
-  let shop=[];
-  if (req.cookies.shop) shop= req.cookies.shop;
-  shop.push(p);
-  res.cookie("shop",shop);
-  res.redirect("/products");
-});
-
-router.get('/shop/remove/:id', async function(req, res, next) {
-  if (req.cookies.shop) shop= req.cookies.shop;
-  shop.splice(
-    shop.findIndex((c)=> (c._id==req.params.id)),1 ); 
-  res.cookie("shop",shop);
-  res.redirect("/shop");
-});
-
 module.exports = router;
