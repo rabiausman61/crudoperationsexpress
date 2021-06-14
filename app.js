@@ -42,5 +42,7 @@ app.use(function(err, req, res, next) {
 mongoose.connect( "mongodb://localhost/productscrud", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-  });
-  module.exports = app;
+  })
+  .then(() => console.log("Connected to Mongo...."))
+  .catch((error) => console.log(error.message));
+module.exports = app;
