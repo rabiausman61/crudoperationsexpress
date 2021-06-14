@@ -8,7 +8,7 @@ router.get('/', async function(req, res, next) {
     let products= await product.find();
   res.render('products/list', {products});
   } catch (error) {
-    res.render(e);
+    res.send("error");
   }
   
 });
@@ -17,7 +17,7 @@ router.get('/add', async function(req, res, next) {
   try{
   res.render('products/add');
   }
-  catch(error){res.render(e);
+  catch(error){res.send("error");
   }
 });
 
@@ -27,7 +27,7 @@ router.post('/add', async function(req, res, next) {
   await p.save();
   res.redirect("/products");
   } catch (error) {
-    res.render(e);
+    res.send("error");
   }
   
 });
@@ -38,7 +38,7 @@ router.get('/delete/:id', async function(req, res, next) {
     let p= await product.findByIdAndDelete(req.params.id);
   res.redirect("/products");
   } catch (error) {
-    res.render(e);
+    res.send("error");
   }
   
 });
@@ -51,7 +51,7 @@ router.get("/edit/:id", async function (req, res, next) {
     let products = await product.findById(req.params.id);
   res.render("products/edit", { products });
   } catch (error) {
-    res.render(e);
+    res.send("error");
   }
   
 });
@@ -63,7 +63,7 @@ router.post("/edit/:id", async function (req, res, next) {
     await products.save();
     res.redirect("/products");
   } catch (error) {
-    res.render(e);
+    res.send("error");
   }
  
 });
