@@ -40,7 +40,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 mongoose
-  .connect(process.env.MONGODB_URI || "mongodb://localhost/productscrud", {
+  .connect( "mongodb://localhost/productscrud", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
