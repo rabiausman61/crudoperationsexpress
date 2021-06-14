@@ -34,7 +34,7 @@ router.get("/edit/:id", async function (req, res, next) {
 router.post("/edit/:id", async function (req, res, next) {
   let products = await product.findById(req.params.id);
   products.name = req.body.name;
-  products.price = req.body.price;
+  products.gender = req.body.gender;
   await products.save();
   res.redirect("/products");
 });
