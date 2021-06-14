@@ -3,11 +3,12 @@ var router = express.Router();
 var product=require("../models/product");
 
 /* GET home page. */
-router.get('/', async function(req, res, next) {
+/*router.get('/', async function(req, res, next) {
   try {
     let products= await product.find();
   res.render('products/list', {products});
-  } catch (error) {
+  } 
+  catch (error) {
     res.send("error");
   }
   
@@ -68,3 +69,4 @@ router.post("/edit/:id", async function (req, res, next) {
  
 });
 module.exports = router;
+*/
