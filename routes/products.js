@@ -60,7 +60,6 @@ router.post("/edit/:id", async function (req, res, next) {
   try {
     let products = await product.findById(req.params.id);
     products.name = req.body.name;
-    products.gender = req.body.gender;
     await products.save();
     res.redirect("/products");
   } catch (error) {
