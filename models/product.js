@@ -9,7 +9,7 @@ var productSchema= mongoose.Schema({
     city:String,
     country:String,
  
-    phoneno: Array,
+    phoneno: Number,
 
 
 });
