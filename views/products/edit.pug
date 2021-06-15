@@ -10,7 +10,7 @@ block content
             input#price(type="text", class="form-control", name="price",value=products.gender required) 
         .form-group
             label(for="email") Email
-            input#email(type="text", class="form-control", name="email", value=products.email required
+            input#email(type="text", class="form-control", name="email", pattern=".+@.+.com",  value=products.email required)
         .form-group
             label(for="coursecode") Coursecode
             input#coursecode(type="text", class="form-control", name="coursecode" ,value=products.coursecode required)
