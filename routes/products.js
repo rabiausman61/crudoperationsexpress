@@ -60,13 +60,13 @@ router.post("/edit/:id", async function (req, res, next) {
   try {
     let products = await product.findById(req.params.id);
     products.name = req.body.name;
-    products.name = req.body.gender;
-    products.name = req.body.email;
-    products.name = req.body.coursecode;
-    products.name = req.body.streetaddress;
-    products.name = req.body.city;
-    products.name = req.body.country;
-    products.name = req.body.phoneno;
+    products.gender = req.body.gender;
+    products.email = req.body.email;
+    products.coursecode = req.body.coursecode;
+    products.streetaddress = req.body.streetaddress;
+    products.city = req.body.city;
+    products.country = req.body.country;
+    products.phoneno = req.body.phoneno;
     await products.save();
     res.redirect("/products");
   } catch (error) {
