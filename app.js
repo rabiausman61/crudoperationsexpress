@@ -39,7 +39,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-mongoose.connect( "mongodb://localhost:27017/productscrud", {
+mongoose.connect( "mongodb+srv://user1:rabia1999@productcrud.tjp9r.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
