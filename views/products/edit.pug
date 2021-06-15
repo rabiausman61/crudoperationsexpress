@@ -4,21 +4,27 @@ block content
     form(action="/products/edit/"+products._id,method="post")
         .form-group
             label(for="name")  Name
-            input#name(type="text", class="form-control", name="name",value=products.name)
+            input#name(type="text", class="form-control", name="name",value=products.name required)
         .form-group
             label(for="price") Gender
-            input#price(type="text", class="form-control", name="price",value=products.gender)
+            input#price(type="text", class="form-control", name="price",value=products.gender required) 
         .form-group
             label(for="email") Email
-            input#email(type="text", class="form-control", name="email", value=products.email)
+            input#email(type="text", class="form-control", name="email", value=products.email required
         .form-group
             label(for="coursecode") Coursecode
-            input#coursecode(type="text", class="form-control", name="coursecode" ,value=products.coursecode)
+            input#coursecode(type="text", class="form-control", name="coursecode" ,value=products.coursecode required)
         .form-group
-            label(for="address") Address
-            input#address(type="text", class="form-control", name="address",value=products.address)
+            label(for="streetaddress") StreetAddress
+            input#streetaddress(type="text", class="form-control", name="streetaddress",value=products.streetaddress required)
+        .form-group
+            label(for="city") City
+            input#city(type="text", class="form-control", name="city",value=products.city required)
+        .form-group
+            label(for="country") Country
+            input#country(type="text", class="form-control", name="country",value=products.country required)
         .form-group
             label(for="phoneno") Phone no
-            input#phoneno(type="number", class="form-control", name="phoneno",value=products.phoneno)
+            input#phoneno(type="number", class="form-control", name="phoneno",value=products.phoneno required)
         input(type="submit", class="btn btn-info")
             

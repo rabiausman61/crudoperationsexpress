@@ -9,11 +9,13 @@ block content
     table.table
         thead 
             tr 
-                th Name 
+                th name 
                 th gender 
                 th email 
                 th coursecode
-                th address 
+                th streetaddress 
+                th city 
+                th country
                 th phoneno
         tbody 
             each product in products   
@@ -22,7 +24,9 @@ block content
                     td=product.gender 
                     td=product.email 
                     td=product.coursecode
-                    td=product.address
+                    td=product.streetaddress 
+                    td=product.city 
+                    td=product.country 
                     td=product.phoneno
                    
                     td 

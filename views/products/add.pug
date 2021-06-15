@@ -4,22 +4,29 @@ block content
     form(action="/products/add",method="post")
         .form-group
             label(for="name") Name
-            input#name(type="text", class="form-control", name="name")
+            input#name(type="text", class="form-control", name="name" required)
         .form-group
             label(for="gender") Gender
-            input#gender(type="text", class="form-control", name="gender")
+            input#gender(type="text", class="form-control", name="gender" required)
         .form-group
             label(for="email") Email
-            input#email(type="text", class="form-control", name="email")
+            input#email(type="text", class="form-control", name="email" ,pattern=".+@.+.com" required)
         .form-group
             label(for="coursecode") Coursecode
-            input#coursecode(type="text", class="form-control", name="coursecode")
+            input#coursecode(type="text", class="form-control", name="coursecode" required)
         .form-group
-            label(for="address") Address
-            input#address(type="text", class="form-control", name="address")
+            label(for="streetaddress") StreetAddress
+            input#streetaddress(type="text", class="form-control", name="streetaddress" required)
+        .form-group
+            label(for="city") City
+            input#city(type="text", class="form-control", name="city" required)
+        .form-group
+            label(for="country") Country
+            input#country(type="text", class="form-control", name="country" required)
+
         .form-group
             label(for="phoneno") Phone no
-            input#phoneno(type="number", class="form-control", name="phoneno")
+            input#phoneno(type="number", class="form-control", name="phoneno" required)
         input(type="submit", class="btn btn-info")
 
             

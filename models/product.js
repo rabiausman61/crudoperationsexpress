@@ -4,11 +4,11 @@ var productSchema= mongoose.Schema({
     email: String,
     gender:String,
     coursecode:String,
-    address:{
-        streetaddress:String,
-        city:String,
-        country:String,
-    },
+   
+    streetaddress:String,
+    city:String,
+    country:String,
+ 
     phoneno: Array,
 
 
